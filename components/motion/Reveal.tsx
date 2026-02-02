@@ -1,10 +1,10 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { motion, useReducedMotion, type Transition } from "framer-motion";
 
-const defaultTransition = {
+const defaultTransition: Transition = {
   duration: 0.6,
-  ease: [0.22, 1, 0.36, 1],
+  ease: [0.22, 1, 0.36, 1] as [number, number, number, number],
 };
 
 export function Reveal({

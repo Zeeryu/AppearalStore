@@ -2,15 +2,15 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, type Transition } from "framer-motion";
 import { useRef } from "react";
 import { MagneticButton } from "@/components/motion/MagneticButton";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
-const defaultTransition = {
+const defaultTransition: Transition = {
   duration: 0.6,
-  ease: [0.22, 1, 0.36, 1],
+  ease: [0.22, 1, 0.36, 1] as [number, number, number, number],
 };
 
 export function HeroSection() {

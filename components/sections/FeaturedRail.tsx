@@ -54,7 +54,7 @@ function FeaturedCard({
 export function FeaturedRail({ products }: { products: Product[] }) {
   const sectionRef = useRef<HTMLElement | null>(null);
   const trackRef = useRef<HTMLDivElement | null>(null);
-  const cardRef = useRef<HTMLAnchorElement | null>(null);
+  const cardRef = useRef<HTMLDivElement | null>(null);
   const [dragWidth, setDragWidth] = useState(0);
   const [snapWidth, setSnapWidth] = useState(0);
   const x = useMotionValue(0);

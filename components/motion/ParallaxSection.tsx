@@ -1,6 +1,12 @@
 "use client";
 
-import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
+import {
+  motion,
+  useReducedMotion,
+  useScroll,
+  useTransform,
+  type UseScrollOptions,
+} from "framer-motion";
 import { useRef } from "react";
 
 type ParallaxSectionProps = {
@@ -12,7 +18,7 @@ type ParallaxSectionProps = {
   toBlur?: number;
   fromOpacity?: number;
   toOpacity?: number;
-  offset?: Parameters<typeof useScroll>[0]["offset"];
+  offset?: UseScrollOptions["offset"];
 };
 
 export function ParallaxSection({
