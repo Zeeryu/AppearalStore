@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+  --bg: #f4f1ea;
+  --fg: #101010;
+  --accent: #b6ff2f;
+  --muted: #7a7a7a;
+  --border: #1c1c1c;
+  --frame: #121212;
+  --frame-fg: #f6f3ee;
+  --glow: #b6ff2f;
+}
+
+body[data-theme="noir"] {
+  color-scheme: dark;
+  --bg: #f4f1ea;
+  --fg: #101010;
+  --accent: #b6ff2f;
+  --muted: #6b6b6b;
+  --border: #1c1c1c;
+  --frame: #121212;
+  --frame-fg: #f6f3ee;
+  --glow: #b6ff2f;
+}
+
+body[data-theme="neon"] {
+  color-scheme: dark;
+  --bg: #0b0b0f;
+  --fg: #f6f6ff;
+  --accent: #ff4fd8;
+  --muted: #9ea2ff;
+  --border: #2b2f50;
+  --frame: #0f111a;
+  --frame-fg: #f6f6ff;
+  --glow: #ff4fd8;
+}
+
+body[data-theme="sand"] {
+  color-scheme: light;
+  --bg: #f7f0e5;
+  --fg: #1a1a18;
+  --accent: #d85f2a;
+  --muted: #7d6b57;
+  --border: #d0c0ad;
+  --frame: #1a1a18;
+  --frame-fg: #f7f0e5;
+  --glow: #d85f2a;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  position: relative;
+  overflow-x: hidden;
+}
+
+* {
+  border-color: var(--border);
+}
+
+::selection {
+  background: color-mix(in srgb, var(--accent) 70%, transparent);
+  color: #000;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.35;
+  background:
+    radial-gradient(circle at 15% 20%, color-mix(in srgb, var(--accent) 40%, transparent), transparent 55%),
+    radial-gradient(circle at 85% 10%, rgba(255, 255, 255, 0.08), transparent 45%),
+    radial-gradient(circle at 70% 80%, rgba(0, 0, 0, 0.12), transparent 55%);
+}
