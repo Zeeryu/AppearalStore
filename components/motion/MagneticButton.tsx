@@ -4,7 +4,7 @@ import { motion, useSpring } from "framer-motion";
 import React from "react";
 import { cn } from "@/lib/utils";
 
-type MagneticButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
+type MagneticButtonProps = React.ComponentPropsWithoutRef<typeof motion.button> & {
   intensity?: number;
 };
 
